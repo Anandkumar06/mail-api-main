@@ -8,7 +8,7 @@ let querymail = async(req, res,next)=>
         if(!email){
             res.status(404).json("email not sent")
         }
-        console.log("mail")
+
         draftMail(candidateName,email,position,companyName,offerAmount,startDate)
         res.status(200).json({error:false,message:"mail sent"})
     }
